@@ -829,7 +829,7 @@ end
 
 
 function [zsmooth, Vsmooth, VVsmooth, loglik] = runKF(Y, A, C, Q, R, Z_0, V_0);
-%runKF()    Applies Kalman filter and fixed-interval smoother
+% runKF()    Applies Kalman filter and fixed-interval smoother
 %
 %  Syntax:
 %    [zsmooth, Vsmooth, VVsmooth, loglik] = runKF(Y, A, C, Q, R, Z_0, V_0)
