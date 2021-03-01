@@ -58,7 +58,8 @@ function Res = dfm(X,Spec,threshold)
 % DFM input specifications: See documentation for details
 Par.blocks = Spec.Blocks;                  % Block loading structure
 Par.nQ = sum(strcmp('q',Spec.Frequency));  % Number of quarterly series
-Par.p = 1;                                 % Number of lags in autoregressive of factor (same for all factors)
+Par.p = 1;                                 
+% Number of lags in autoregressive of factor (same for all factors)
 Par.r = ones(1,size(Spec.Blocks,2));       % Number of common factors for each block
 %Par.r(1) =2;
 % Display blocks
