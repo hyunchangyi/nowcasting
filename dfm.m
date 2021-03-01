@@ -5,17 +5,17 @@ function Res = dfm(X,Spec,threshold)
 %    Res = DFM(X,Par)
 %
 %  Description:
-%   DFM() inputs the organized and transformed data X and parameter structure Par.
-%   Then, the function outputs dynamic factor model structure Res and data
-%   summary statistics (mean and standard deviation).
+% DFM() inputs the organized and transformed data X and parameter structure Par.
+% Then, the function outputs dynamic factor model structure Res and data
+% summary statistics (mean and standard deviation).
 %
-%  Input arguments:
-%    X: Kalman-smoothed data where missing values are replaced by their expectation
-%    Par: A structure containing the following parameters:
-%      Par.blocks: Block loadings.
-%      Par.nQ: Number of quarterly series
-%      Par.p: Number of lags in transition matrix
-%      Par.r: Number of common factors for each block
+% Input arguments:
+% X: Kalman-smoothed data where missing values are replaced by their expectation
+% Par: A structure containing the following parameters:
+% Par.blocks: Block loadings.
+% Par.nQ: Number of quarterly series
+% Par.p: Number of lags in transition matrix
+% Par.r: Number of common factors for each block
 %
 % Output Arguments:
 %
@@ -58,8 +58,9 @@ function Res = dfm(X,Spec,threshold)
 % DFM input specifications: See documentation for details
 Par.blocks = Spec.Blocks;                  % Block loading structure
 Par.nQ = sum(strcmp('q',Spec.Frequency));  % Number of quarterly series
-Par.p = 1;                                 % Number of lags in autoregressive of factor (same for all factors)
-Par.r = ones(1,size(Spec.Blocks,2));       % Number of common factors for each block
+% Number of lags in autoregressive of factor (same for all factors)
+Par.p = 1;                                 
+Par.r = ones(1,size(Spec.Blocks,2));   % Number of common factors for each block
 %Par.r(1) =2;
 % Display blocks
 try
@@ -132,7 +133,7 @@ y_est = remNaNs_spline(xNaN,optNaN)';
 
 while (num_iter < max_iter) & ~converged % Loop until converges or max iter.
 
-    [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
+    [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ... % Applying EM algorithm
         EMstep(y_est, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks);
 
     C = C_new;
@@ -145,11 +146,12 @@ while (num_iter < max_iter) & ~converged % Loop until converges or max iter.
             em_converged(loglik, previous_loglik, threshold, 1);
     end
 
-    if (mod(num_iter,10) == 0) && (num_iter > 0)  % Print updates to command window
+    if (mod(num_iter,10) == 0) && (num_iter > 0)%Print updates to command window
         disp(['Now running the ',num2str(num_iter),...
               'th iteration of max ', num2str(max_iter)]);
         disp(['  Loglik','   (% Change)'])
-        disp([num2str(loglik),'   (', sprintf('%6.2f',100*((loglik-previous_loglik)/previous_loglik)) '%)'])
+        disp([num2str(loglik),'   (', ...
+        sprintf('%6.2f',100*((loglik-previous_loglik)/previous_loglik)) '%)'])
     end
 
 
@@ -191,7 +193,7 @@ Res.p = p;
 
 nQ       = Par.nQ;                      % Number of quarterly series
 nM       = size(Spec.SeriesID,1) - nQ;  % Number monthly series
-nLags    = max(Par.p, 5);               % 5 comes from monthly-quarterly aggregation
+nLags    = max(Par.p, 5);           % 5 comes from monthly-quarterly aggregation
 nFactors = sum(Par.r);
 
 fprintf('\n\n\n');
@@ -210,7 +212,8 @@ fprintf('\n\n\n');
 catch
 end
 
-% Table with AR model on factors (factors with AR parameter and variance of residuals)
+% Table with AR model on factors 
+% (factors with AR parameter and variance of residuals)
 
 A_terms = diag(Res.A);  % Transition equation terms
 Q_terms = diag(Res.Q);  % Covariance matrix terms
@@ -225,10 +228,12 @@ fprintf('\n\n\n');
 catch
 end
 
-% Table with AR model idiosyncratic errors (factors with AR parameter and variance of residuals)
+% Table with AR model idiosyncratic errors 
+% (factors with AR parameter and variance of residuals)
 try
 disp('Table 7: Autoregressive Coefficients on Idiosyncratic Component')
-disp(table(A_terms([nFactors*5+1:nFactors*5+nM nFactors*5+nM+1:5:end]),...  % 21:50 give monthly, 51:5:61 give quarterly
+% 21:50 give monthly, 51:5:61 give quarterly
+disp(table(A_terms([nFactors*5+1:nFactors*5+nM nFactors*5+nM+1:5:end]),...  
            Q_terms([nFactors*5+1:nFactors*5+nM nFactors*5+nM+1:5:end]), ...
            'VariableNames', {'AR_Coefficient', 'Variance_Residual'}, ...
            'RowNames', strrep(Spec.SeriesName,' ','_')));
@@ -242,7 +247,8 @@ end
 %% PROCEDURES -------------------------------------------------------------
 % Note: Kalman filter (runKF()) is in the 'functions' folder
 
-function  [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = EMstep(y, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks)
+function  [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...
+                EMstep(y, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks)
 %EMstep    Applies EM algorithm for parameter reestimation
 %
 %  Syntax:
@@ -330,9 +336,9 @@ for i = 1:num_blocks  % Loop for each block: factors are uncorrelated
     r_i = r(i);  % r_i = 1 if block is loaded
     rp = r_i*p;
     rp1 = sum(r(1:i-1))*ppC;
-    b_subset = rp1+1:rp1+rp;  % Subset blocks: Helps for subsetting Zsmooth, Vsmooth
-    t_start = rp1+1;          % Transition matrix factor idx start
-    t_end = rp1+r_i*ppC;      % Transition matrix factor idx end
+    b_subset = rp1+1:rp1+rp; %Subset blocks:Helps for subsetting Zsmooth/Vsmooth
+    t_start = rp1+1;         %Transition matrix factor idx start
+    t_end = rp1+r_i*ppC;     %Transition matrix factor idx end
 
 
 
@@ -359,7 +365,7 @@ for i = 1:num_blocks  % Loop for each block: factors are uncorrelated
     A_i(1:r_i,1:rp) = EZZ_FB(1:r_i,1:rp) * inv(EZZ_BB(1:rp,1:rp));
 
     % Equation 8: Covariance matrix of residuals of VAR
-    Q_i(1:r_i,1:r_i) = (EZZ(1:r_i,1:r_i) - A_i(1:r_i,1:rp)* EZZ_FB(1:r_i,1:rp)') / T;
+    Q_i(1:r_i,1:r_i) = (EZZ(1:r_i,1:r_i)-A_i(1:r_i,1:rp)*EZZ_FB(1:r_i,1:rp)')/T;
 
     % Place updated results in output matrix
     A_new(t_start:t_end, t_start:t_end) = A_i;
@@ -373,7 +379,7 @@ end
 rp1 = sum(r)*ppC;           % Col size of factor portion
 niM = sum(i_idio(1:nM));    % Number of monthly values
 t_start = rp1+1;            % Start of idiosyncratic component index
-i_subset = t_start:rp1+niM; % Gives indices for monthly idiosyncratic component values
+i_subset = t_start:rp1+niM; % indices for monthly idiosyncratic component values
 
 
 % Below 3 estimate the idiosyncratic component (for eqns 6, 8 BM 2010)
@@ -383,11 +389,11 @@ EZZ = diag(diag(Zsmooth(t_start:end, 2:end) * Zsmooth(t_start:end, 2:end)'))...
     + diag(diag(sum(Vsmooth(t_start:end, t_start:end, 2:end), 3)));
 
 % E[f_{t-1}*f_{t-1}' | \Omega_T]
-EZZ_BB = diag(diag(Zsmooth(t_start:end, 1:end-1)* Zsmooth(t_start:end, 1:end-1)'))...
+EZZ_BB=diag(diag(Zsmooth(t_start:end,1:end-1)*Zsmooth(t_start:end,1:end-1)'))...
        + diag(diag(sum(Vsmooth(t_start:end, t_start:end, 1:end-1), 3)));
 
 % E[f_t*f_{t-1}' | \Omega_T]
-EZZ_FB = diag(diag(Zsmooth(t_start:end, 2:end)*Zsmooth(t_start:end, 1:end-1)'))...
+EZZ_FB=diag(diag(Zsmooth(t_start:end, 2:end)*Zsmooth(t_start:end, 1:end-1)'))...
        + diag(diag(sum(VVsmooth(t_start:end, t_start:end, :), 3)));
 
 A_i = EZZ_FB * diag(1./diag((EZZ_BB)));  % Equation 6
@@ -456,11 +462,11 @@ for i = 1:n_bl  % Loop through unique loadings (e.g. [1 0 0 0], [1 1 0 0])
 
     %%% UPDATE MONTHLY VARIABLES: Loop through each period ----------------
     for t = 1:T
-        Wt = diag(~nanY(idx_iM, t));  % Gives selection matrix (1 for nonmissing values)
+        Wt = diag(~nanY(idx_iM, t));  %selection matrix(1 for nonmissing values)
 
         denom = denom +...  % E[f_t*t_t' | Omega_T]
-                kron(Zsmooth(bl_idxM(i, :), t+1) * Zsmooth(bl_idxM(i, :), t+1)' + ...
-                Vsmooth(bl_idxM(i, :), bl_idxM(i, :), t+1), Wt);
+            kron(Zsmooth(bl_idxM(i, :), t+1)*Zsmooth(bl_idxM(i, :), t+1)' + ...
+            Vsmooth(bl_idxM(i, :), bl_idxM(i, :), t+1), Wt);
 
         nom = nom + ...  E[y_t*f_t' | \Omega_T]
               y(idx_iM, t) * Zsmooth(bl_idxM(i, :), t+1)' - ...
@@ -498,16 +504,16 @@ for i = 1:n_bl  % Loop through unique loadings (e.g. [1 0 0 0], [1 1 0 0])
        i_idio_jQ = (rp1 + n_idio_M + 5*(idx_jQ-1)+1:rp1+ n_idio_M + 5*idx_jQ);
 
        % Place quarterly values in output matrix
-       V_0_new(i_idio_jQ, i_idio_jQ) = Vsmooth(i_idio_jQ, i_idio_jQ,1);
-       A_new(i_idio_jQ(1), i_idio_jQ(1)) = A_i(i_idio_jQ(1)-rp1, i_idio_jQ(1)-rp1);
-       Q_new(i_idio_jQ(1), i_idio_jQ(1)) = Q_i(i_idio_jQ(1)-rp1, i_idio_jQ(1)-rp1);
+       V_0_new(i_idio_jQ,i_idio_jQ) = Vsmooth(i_idio_jQ, i_idio_jQ,1);
+       A_new(i_idio_jQ(1),i_idio_jQ(1)) =A_i(i_idio_jQ(1)-rp1,i_idio_jQ(1)-rp1);
+       Q_new(i_idio_jQ(1),i_idio_jQ(1)) =Q_i(i_idio_jQ(1)-rp1,i_idio_jQ(1)-rp1);
 
        for t=1:T
            Wt = diag(~nanY(j,t));  % Selection matrix for quarterly values
 
            % Intermediate steps in BGR equation 13
            denom = denom + ...
-                   kron(Zsmooth(bl_idxQ(i,:), t+1) * Zsmooth(bl_idxQ(i,:), t+1)'...
+                   kron(Zsmooth(bl_idxQ(i,:),t+1)*Zsmooth(bl_idxQ(i,:), t+1)'...
                  + Vsmooth(bl_idxQ(i,:), bl_idxQ(i,:), t+1), Wt);
            nom = nom + y(j, t)*Zsmooth(bl_idxQ(i,:), t+1)';
            nom = nom -...
@@ -518,7 +524,7 @@ for i = 1:n_bl  % Loop through unique loadings (e.g. [1 0 0 0], [1 1 0 0])
 
         C_i = inv(denom) * nom';
         C_i_constr = C_i - ...  % BGR equation 13
-                     inv(denom) * R_con_i'*inv(R_con_i*inv(denom)*R_con_i') * (R_con_i*C_i-q_con_i);
+    inv(denom)*R_con_i'*inv(R_con_i*inv(denom)*R_con_i')*(R_con_i*C_i-q_con_i);
 
         % Place updated values in output structure
         C_new(j,bl_idxQ(i,:)) = C_i_constr;
@@ -531,14 +537,15 @@ R_new = zeros(n,n);
 for t=1:T
     Wt = diag(~nanY(:,t));  % Selection matrix
     R_new = R_new + (y(:,t) - ...  % BGR equation 15
-            Wt * C_new * Zsmooth(:, t+1)) * (y(:,t) - Wt*C_new*Zsmooth(:,t+1))'...
+            Wt * C_new * Zsmooth(:, t+1))*(y(:,t) - Wt*C_new*Zsmooth(:,t+1))'...
            + Wt*C_new*Vsmooth(:,:,t+1)*C_new'*Wt + (eye(n)-Wt)*R*(eye(n)-Wt);
 end
 
 
 R_new = R_new/T;
 RR = diag(R_new); %RR(RR<1e-2) = 1e-2;
-RR(i_idio_M) = 1e-04;  % Ensure non-zero measurement error. See Doz, Giannone, Reichlin (2012) for reference.
+RR(i_idio_M) = 1e-04;  % Ensure non-zero measurement error. 
+                       % See Doz, Giannone, Reichlin (2012) for reference.
 RR(nM+1:end) = 1e-04;
 R_new = diag(RR);
 
@@ -548,11 +555,9 @@ end
 
 %--------------------------------------------------------------------------
 
-function [converged, decrease] = em_converged(loglik, previous_loglik, threshold, check_decreased)
+function [converged, decrease] = ...
+    em_converged(loglik, previous_loglik, threshold, check_decreased)
 %em_converged    checks whether EM algorithm has converged
-%
-%  Syntax:
-%    [converged, decrease] = em_converged(loglik, previous_loglik, threshold, check_increased)
 %
 %  Description:
 %    em_converged() checks whether EM has converged. Convergence occurs if
@@ -571,7 +576,7 @@ function [converged, decrease] = em_converged(loglik, previous_loglik, threshold
 %    check_decreased: Returns text output if log-likelihood decreases.
 %
 %  Output:
-%    converged (numeric): Returns 1 if convergence criteria satisfied, and 0 otherwise.
+%    converged (numeric): Returns 1 if convergence criteria satisfied, and 0 o/w
 %    decrease (numeric): Returns 1 if loglikelihood decreased.
 
 %% Instantiate variables
@@ -588,7 +593,8 @@ decrease = 0;
 
 if check_decreased
     if loglik - previous_loglik < -1e-3 % allow for a little imprecision
-        fprintf(1, '******likelihood decreased from %6.4f to %6.4f!\n', previous_loglik, loglik);
+        fprintf(1, '******likelihood decreased from %6.4f to %6.4f!\n', ...
+                previous_loglik, loglik);
         decrease = 1;
     end
 end
@@ -619,8 +625,8 @@ end
 %  - r:      Number of common factors for each block
 %  - p:      Number of lags in transition equation
 %  - blocks: Gives series loadings
-%  - optNaN: Option for missing values in spline. See remNaNs_spline() for details.
-%  - Rcon:   Incorporates estimation for quarterly series (i.e. "tent structure")
+%  - optNaN: Option for missing values in spline. See remNaNs_spline()
+%  - Rcon:   Incorporates estimation for quarterly series(i.e. "tent structure")
 %  - q:      Constraints on loadings for quarterly variables
 %  - NQ:     Number of quarterly variables
 %  - i_idio: Logical. Gives index for monthly variables (1) and quarterly (0)
@@ -636,7 +642,7 @@ end
 x = X;
 Rcon = R_mat;
 
-function [ A, C, Q, R, Z_0, V_0] = InitCond(x,r,p,blocks,optNaN,Rcon,q,nQ,i_idio)
+function [ A, C, Q, R, Z_0, V_0] =InitCond(x,r,p,blocks,optNaN,Rcon,q,nQ,i_idio)
 
 pC = size(Rcon,2);  % Gives 'tent' structure size (quarterly to monthly)
 ppC = max(p,pC);
@@ -649,9 +655,9 @@ OPTS.disp=0;  % Turns off diagnostic information for eigenvalue computation
 nM = N-nQ;           % Number of monthly series
 
 xNaN = xBal;
-xNaN(indNaN) = nan;  % Set missing values equal to NaNs
-res = xBal;          % Spline output equal to res: Later this is used for residuals
-resNaN = xNaN;       % Later used for residuals
+xNaN(indNaN) = nan;% Set missing values equal to NaNs
+res = xBal;        %Spline output equal to res: Later this is used for residuals
+resNaN = xNaN;     %Later used for residuals
 
 % Initialize model coefficient output
 C = [];
@@ -678,7 +684,7 @@ for i = 1:n_b  % Loop for each block
     % Returns eigenvector v w/largest eigenvalue d
     [v, d] = eigs(cov(res(:,idx_iM)), r_i, 'lm');
 
-    % Flip sign for cleaner output. Gives equivalent results without this section
+    %Flip sign for cleaner output. Gives equivalent results without this section
     if(sum(v) < 0)
         v = -v;
     end
@@ -722,7 +728,8 @@ for i = 1:n_b  % Loop for each block
         C_i(j,1:pC*r_i)=Cc';  % Place in output matrix
     end
 
-    ff = [zeros(pC-1,pC*r_i);ff];  % Zeros in first pC-1 entries (replace dropped from lag)
+    ff = [zeros(pC-1,pC*r_i);ff];   % Zeros in first pC-1 entries 
+                                    % (replace dropped from lag)
 
     % Residual calculations
     res = res - ff*C_i';
@@ -748,7 +755,7 @@ for i = 1:n_b  % Loop for each block
     e = z  - Z*A_temp;         % VAR residuals
     Q_i(1:r_i,1:r_i) = cov(e); % VAR covariance matrix
 
-    initV_i = reshape(inv(eye((r_i*ppC)^2)-kron(A_i,A_i))*Q_i(:),r_i*ppC,r_i*ppC);
+    initV_i=reshape(inv(eye((r_i*ppC)^2)-kron(A_i,A_i))*Q_i(:),r_i*ppC,r_i*ppC);
 
     % Gives top left block for the transition matrix
     A = blkdiag(A,A_i);
@@ -760,14 +767,16 @@ eyeN = eye(N);  % Used inside observation matrix
 eyeN(:,~i_idio) = [];
 
 C=[C eyeN];
-C = [C [zeros(nM,5*nQ); kron(eye(nQ),[1 2 3 2 1])]];  % Monthly-quarterly agreggation scheme
-R = diag(var(resNaN,'omitnan'));  % Initialize covariance matrix for transition matrix
+C = [C [zeros(nM,5*nQ); kron(eye(nQ),[1 2 3 2 1])]];  
+                                        % Monthly-quarterly agreggation scheme
+R = diag(var(resNaN,'omitnan'));  
+                            % Initialize covariance matrix for transition matrix
 
 
 ii_idio = find(i_idio);    % Indicies for monthly variables
 n_idio = length(ii_idio);  % Number of monthly variables
 BM = zeros(n_idio);        % Initialize monthly transition matrix values
-SM = zeros(n_idio);        % Initialize monthly residual covariance matrix values
+SM = zeros(n_idio);       % Initialize monthly residual covariance matrix values
 
 
 for i = 1:n_idio;  % Loop for monthly variables
@@ -788,7 +797,8 @@ for i = 1:n_idio;  % Loop for monthly variables
 
     % Linear regression: AR 1 process for monthly series residuals
     BM(i,i) = inv(res_i(1:end-1)'*res_i(1:end-1))*res_i(1:end-1)'*res_i(2:end,:);
-    SM(i,i) = cov(res_i(2:end)-res_i(1:end-1)*BM(i,i));  % Residual covariance matrix
+    SM(i,i) = cov(res_i(2:end)-res_i(1:end-1)*BM(i,i));  
+                                                    % Residual covariance matrix
 
 end
 
@@ -819,7 +829,7 @@ end
 
 
 function [zsmooth, Vsmooth, VVsmooth, loglik] = runKF(Y, A, C, Q, R, Z_0, V_0);
-%runKF()    Applies Kalman filter and fixed-interval smoother
+% runKF()    Applies Kalman filter and fixed-interval smoother
 %
 %  Syntax:
 %    [zsmooth, Vsmooth, VVsmooth, loglik] = runKF(Y, A, C, Q, R, Z_0, V_0)
