@@ -106,7 +106,7 @@ xNaN = (X-repmat(Mx,T,1))./repmat(Wx,T,1);  % Standardize series
 optNaN.method = 2; % Remove leading and closing zeros
 optNaN.k = 3;      % Setting for filter(): See remNaN_spline
 
-[A, C, Q, R, Z_0, V_0] = InitCond(xNaN,r,p,blocks,optNaN,Rcon,q,nQ,i_idio);
+[A, C, Q, R, Z_0, V_0] = InitCond(xNaN,r,p,blocks,optNaN,R_mat,q,nQ,i_idio);
 
 % Initialize EM loop values
 previous_loglik = -inf;
@@ -127,6 +127,13 @@ y = xNaN';
 % Remove the leading and ending nans
 optNaN.method = 3;
 y_est = remNaNs_spline(xNaN,optNaN)';
+
+%% EM one-time
+
+[C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
+        EMstep(y_est, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks);
+    
+%% EM Loop    
 
 while (num_iter < max_iter) & ~converged % Loop until converges or max iter.
 
@@ -631,8 +638,6 @@ end
 %  - Z_0: Initial value of state
 %  - V_0: Initial value of covariance matrix
 
-x = xNaN;
-Rcon = R_mat;
 
 function [ A, C, Q, R, Z_0, V_0] = InitCond(x,r,p,blocks,optNaN,Rcon,q,nQ,i_idio)
 
