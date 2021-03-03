@@ -53,7 +53,9 @@ function Res = dfm(X,Spec,threshold)
 %   Oxford Handbook on Economic Forecasting.
 
 %% Store model parameters ------------------------------------------------
-
+if(nargin < 3)
+    threshold = 1e-5;  % EM loop threshold (default value)
+end
 
 % DFM input specifications: See documentation for details
 Par.blocks = Spec.Blocks;                  % Block loading structure
@@ -90,10 +92,6 @@ R_mat = [  2 -1  0  0  0;...
            1  0  0  0 -1];
        
 q = zeros(4,1);
-
-if(nargin < 3)
-    threshold = 1e-5;  % EM loop threshold (default value)
-end
 
 max_iter = 5000;  % EM loop maximum number of iterations
 
@@ -633,7 +631,7 @@ end
 %  - Z_0: Initial value of state
 %  - V_0: Initial value of covariance matrix
 
-x = X;
+x = xNaN;
 Rcon = R_mat;
 
 function [ A, C, Q, R, Z_0, V_0] = InitCond(x,r,p,blocks,optNaN,Rcon,q,nQ,i_idio)
