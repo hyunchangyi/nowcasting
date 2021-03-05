@@ -129,6 +129,11 @@ y = xNaN';
 % Remove the leading and ending nans
 optNaN.method = 3;
 y_est = remNaNs_spline(xNaN,optNaN)';
+
+%% EM one-time
+
+[C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
+        EMstep(y_est, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks);
     
 %% EM Loop    
 
@@ -432,6 +437,7 @@ for i = 1:num_blocks
     q_con = [q_con;zeros(r(i)*size(R_mat,1),1)];
 end
 
+%%
 % Indicator for monthly/quarterly blocks in observation matrix
 bl_idxM = logical(bl_idxM);
 bl_idxQ = logical(bl_idxQ);
@@ -476,7 +482,8 @@ for i = 1:n_bl  % Loop through unique loadings (e.g. [1 0 0 0], [1 1 0 0])
 
     % Place updated monthly results in output matrix
     C_new(idx_iM,bl_idxM(i,:)) = reshape(vec_C, n_i, rs);
-    
+end
+
    %%% UPDATE QUARTERLY VARIABLES -----------------------------------------
 
    idx_iQ = idx_i(idx_i > nM);  % Index for quarterly series
