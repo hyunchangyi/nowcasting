@@ -32,6 +32,9 @@ vintage_new = '2016-12-23'; datafile_new = fullfile('data','US',[vintage_new '.x
 [X_old,~   ] = load_data(datafile_old,Spec);
 [X_new,Time] = load_data(datafile_new,Spec);
 
+
+%%
+
 % check if spec used in estimation is consistent with the current spec
 if isequal(Res.Spec,Spec)
     Res = Res.Res;
@@ -41,6 +44,7 @@ else
     save('ResDFM','Res','Spec');
 end 
 
+%%
 update_nowcast(X_old,X_new,Time,Spec,Res,series,period,vintage_old,vintage_new);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -108,6 +108,12 @@ xNaN = (X-repmat(Mx,T,1))./repmat(Wx,T,1);  % Standardize series
 optNaN.method = 2; % Remove leading and closing zeros
 optNaN.k = 3;      % Setting for filter(): See remNaN_spline
 
+
+x = xNaN
+Rcon = R_mat
+%%
+
+
 [A, C, Q, R, Z_0, V_0] = InitCond(xNaN,r,p,blocks,optNaN,R_mat,q,nQ,i_idio);
 
 % Initialize EM loop values
