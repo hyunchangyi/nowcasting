@@ -230,8 +230,7 @@ for i = 1:n_bl  % Loop through unique loadings (e.g. [1 0 0 0], [1 1 0 0])
 
     % Place updated monthly results in output matrix
     C_new(idx_iM,bl_idxM(i,:)) = reshape(vec_C, n_i, rs);
-   
-    
+
    %%% UPDATE QUARTERLY VARIABLES -----------------------------------------
 
    idx_iQ = idx_i(idx_i > nM);  % Index for quarterly series
