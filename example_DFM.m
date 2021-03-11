@@ -48,9 +48,11 @@ pause(1); % to display plot
 
 
 %% Run dynamic factor model (DFM) and save estimation output as 'ResDFM'.
-threshold = 1e-4; % Set to 1e-5 for more robust estimates
+threshold = 1e-5; % Set to 1e-5 for more robust estimates
 
 Res = dfm(X,Spec,threshold);
+
+%%
 save('ResDFM','Res','Spec');
 
 

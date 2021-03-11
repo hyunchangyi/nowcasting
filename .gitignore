@@ -8,3 +8,5 @@ data/US/2016-12-23.xls
 Am.csv
 data/US/2016-12-16.xls
 example_Nowcast.asv
+functions/dfm.asv
+functions/update_nowcast.asv

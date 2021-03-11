@@ -116,13 +116,12 @@ Rcon = R_mat;
 
 [A, C, Q, R, Z_0, V_0] = InitCond(xNaN,r,p,blocks,optNaN,R_mat,q,nQ,i_idio);
 
-csvwrite('A_init.csv', A)
-csvwrite('C_init.csv', C)
-csvwrite('Q_init.csv', Q)
-csvwrite('R_init.csv', R)
-csvwrite('Z_0_init.csv', Z_0)
-csvwrite('V_0_init.csv', V_0)
-
+% csvwrite('A_init.csv', A)
+% csvwrite('C_init.csv', C)
+% csvwrite('Q_init.csv', Q)
+% csvwrite('R_init.csv', R)
+% csvwrite('Z_0_init.csv', Z_0)
+% csvwrite('V_0_init.csv', V_0)
 
 % Initialize EM loop values
 previous_loglik = -inf;
@@ -145,49 +144,49 @@ optNaN.method = 3;
 y_est = remNaNs_spline(xNaN,optNaN)';
 csvwrite('y_est.csv', y_est);
 
-y = y_est;
-%%
-S = SKF(y_est, A, C, Q, R, Z_0, V_0);  % Kalman filter
-
-csvwrite('SZm.csv', S.Zm)
-csvwrite('SVm.csv', S.Vm)
-csvwrite('SZmU.csv', S.ZmU)
-csvwrite('SVmU.csv', S.VmU)
-csvwrite('Sloglik.csv', S.loglik)
-csvwrite('Sk_t.csv', S.k_t)
-
-
-%%
-S = FIS(A, S);                     % Fixed interval smoother
-
-csvwrite('FZm.csv', S.Zm)
-csvwrite('FVm.csv', S.Vm)
-csvwrite('FZmU.csv', S.ZmU)
-csvwrite('FVmU.csv', S.VmU)
-csvwrite('Floglik.csv', S.loglik)
-csvwrite('Fk_t.csv', S.k_t)
-csvwrite('FZmT.csv', S.ZmT)
-csvwrite('FVmT.csv', S.VmT)
-csvwrite('FVmT_1.csv', S.VmT_1)
-
-%%
-[Zsmooth, Vsmooth, VVsmooth, loglik] = runKF(y_est, A, C, Q, R, Z_0, V_0);
-csvwrite('Zsm.csv', Zsmooth)
-csvwrite('Vsm.csv', Vsmooth)
-csvwrite('VVsm.csv', VVsmooth)
-csvwrite('loglikm.csv', loglik)
+% y = y_est;
+% %%
+% S = SKF(y_est, A, C, Q, R, Z_0, V_0);  % Kalman filter
+% 
+% csvwrite('SZm.csv', S.Zm)
+% csvwrite('SVm.csv', S.Vm)
+% csvwrite('SZmU.csv', S.ZmU)
+% csvwrite('SVmU.csv', S.VmU)
+% csvwrite('Sloglik.csv', S.loglik)
+% csvwrite('Sk_t.csv', S.k_t)
+% 
+% 
+% %%
+% S = FIS(A, S);                     % Fixed interval smoother
+% 
+% csvwrite('FZm.csv', S.Zm)
+% csvwrite('FVm.csv', S.Vm)
+% csvwrite('FZmU.csv', S.ZmU)
+% csvwrite('FVmU.csv', S.VmU)
+% csvwrite('Floglik.csv', S.loglik)
+% csvwrite('Fk_t.csv', S.k_t)
+% csvwrite('FZmT.csv', S.ZmT)
+% csvwrite('FVmT.csv', S.VmT)
+% csvwrite('FVmT_1.csv', S.VmT_1)
+% 
+% %%
+% [Zsmooth, Vsmooth, VVsmooth, loglik] = runKF(y_est, A, C, Q, R, Z_0, V_0);
+% csvwrite('Zsm.csv', Zsmooth)
+% csvwrite('Vsm.csv', Vsmooth)
+% csvwrite('VVsm.csv', VVsmooth)
+% csvwrite('loglikm.csv', loglik)
     
 %%
-[C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
-        EMstep(y_est, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks);
-
-csvwrite('A_em.csv', A_new)
-csvwrite('C_em.csv', C_new)
-csvwrite('Q_em.csv', Q_new)
-csvwrite('R_em.csv', R_new)
-csvwrite('Z_0_em.csv', Z_0)
-csvwrite('V_0_em.csv', V_0)
-csvwrite('loglik_em.csv', loglik)
+% [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
+%         EMstep(y_est, A, C, Q, R, Z_0, V_0, r,p,R_mat,q,nQ,i_idio,blocks);
+% 
+% csvwrite('A_em.csv', A_new)
+% csvwrite('C_em.csv', C_new)
+% csvwrite('Q_em.csv', Q_new)
+% csvwrite('R_em.csv', R_new)
+% csvwrite('Z_0_em.csv', Z_0)
+% csvwrite('V_0_em.csv', V_0)
+% csvwrite('loglik_em.csv', loglik)
 
 %% EM Loop    
 
@@ -206,7 +205,7 @@ while (num_iter < max_iter) & ~converged % Loop until converges or max iter.
             em_converged(loglik, previous_loglik, threshold, 1);
     end
 
-    if (mod(num_iter,10) == 0) && (num_iter > 0)  % Print updates to command window
+    if (mod(num_iter,100) == 0) && (num_iter > 0)  % Print updates to command window
         disp(['Now running the ',num2str(num_iter),...
               'th iteration of max ', num2str(max_iter)]);
         disp(['  Loglik','   (% Change)'])
