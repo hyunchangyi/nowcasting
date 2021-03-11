@@ -142,7 +142,8 @@ y = xNaN';
 % Remove the leading and ending nans
 optNaN.method = 3;
 y_est = remNaNs_spline(xNaN,optNaN)';
-csvwrite('y_est.csv', y_est);
+y = y_est;
+% csvwrite('y_est.csv', y_est);
 
 % y = y_est;
 % %%
