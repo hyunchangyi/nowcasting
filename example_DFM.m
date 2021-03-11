@@ -33,24 +33,34 @@ summarize(X,Time,Spec,vintage); % summarize data
 
 
 %% Plot raw and transformed data.
-% Industrial Production (INDPRO) <fred.stlouisfed.org/series/INDPRO>
-idxSeries = strcmp('INDPRO',SeriesID); t_obs = ~isnan(X(:,idxSeries));
-figure('Name',['Data - ' SeriesName{idxSeries}]);
-
-subplot(2,1,1); box on;
-plot(Time(t_obs),Z(t_obs,idxSeries)); title('raw observed data');
-ylabel(Units{idxSeries}); xlim(Time([1 end])); datetick('x','yyyy','keeplimits');
-
-subplot(2,1,2); box on;
-plot(Time(t_obs),X(t_obs,idxSeries)); title('transformed data');
-ylabel(UnitsTransformed{idxSeries}); xlim(Time([1 end])); datetick('x','yyyy','keeplimits');
-pause(1); % to display plot
+% % Industrial Production (INDPRO) <fred.stlouisfed.org/series/INDPRO>
+% idxSeries = strcmp('INDPRO',SeriesID); t_obs = ~isnan(X(:,idxSeries));
+% figure('Name',['Data - ' SeriesName{idxSeries}]);
+% 
+% subplot(2,1,1); box on;
+% plot(Time(t_obs),Z(t_obs,idxSeries)); title('raw observed data');
+% ylabel(Units{idxSeries}); xlim(Time([1 end])); datetick('x','yyyy','keeplimits');
+% 
+% subplot(2,1,2); box on;
+% plot(Time(t_obs),X(t_obs,idxSeries)); title('transformed data');
+% ylabel(UnitsTransformed{idxSeries}); xlim(Time([1 end])); datetick('x','yyyy','keeplimits');
+% pause(1); % to display plot
 
 
 %% Run dynamic factor model (DFM) and save estimation output as 'ResDFM'.
 threshold = 1e-5; % Set to 1e-5 for more robust estimates
 
 Res = dfm(X,Spec,threshold);
+csvwrite('M_csv\Res5_x_sm.csv', Res.x_sm)
+csvwrite('M_csv\Res5_X_sm.csv', Res.X_sm)
+csvwrite('M_csv\Res5_A.csv', Res.A)
+csvwrite('M_csv\Res5_C.csv', Res.C)
+csvwrite('M_csv\Res5_Q.csv', Res.Q)
+csvwrite('M_csv\Res5_R.csv', Res.R)
+csvwrite('M_csv\Res5_Z_0.csv', Res.Z_0)
+csvwrite('M_csv\Res5_V_0.csv', Res.V_0)
+csvwrite('M_csv\Res5_Mx.csv', Res.Mx)
+csvwrite('M_csv\Res5_Wx.csv', Res.Wx)
 
 %%
 save('ResDFM','Res','Spec');

@@ -30,6 +30,9 @@ function Res = para_const(X, P, lag)
 % ARBITRARY PATTERN OF MISSING DATA."
 % by Marta Banbura and Michele Modugno 
 
+% P = Res;
+% X = X_old;
+% lag = 0;
 %% Set model parameters and data preparation
 
 % Set model parameters

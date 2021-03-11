@@ -30,9 +30,9 @@ function [y_old,y_new,singlenews,actual,forecast,weight,t_miss,v_miss,innov] = N
 
 
 %(X_rev,X_new,Res,t_nowcast,i_series) => (X_old,X_new,Res,t_fcst,v_news)
-X_old = X_rev;
-t_fcst = t_nowcast;
-v_news = i_series;
+% X_old = X_rev;
+% t_fcst = t_nowcast;
+% v_news = i_series;
 
 %% Initialize variables
 
