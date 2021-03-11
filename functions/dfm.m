@@ -116,12 +116,12 @@ Rcon = R_mat;
 
 [A, C, Q, R, Z_0, V_0] = InitCond(xNaN,r,p,blocks,optNaN,R_mat,q,nQ,i_idio);
 
-% csvwrite('A_init.csv', A)
-% csvwrite('C_init.csv', C)
-% csvwrite('Q_init.csv', Q)
-% csvwrite('R_init.csv', R)
-% csvwrite('Z_0_init.csv', Z_0)
-% csvwrite('V_0_init.csv', V_0)
+% csvwrite('M_csv\A_init.csv', A)
+% csvwrite('M_csv\C_init.csv', C)
+% csvwrite('M_csv\Q_init.csv', Q)
+% csvwrite('M_csv\R_init.csv', R)
+% csvwrite('M_csv\Z_0_init.csv', Z_0)
+% csvwrite('M_csv\V_0_init.csv', V_0)
 
 % Initialize EM loop values
 previous_loglik = -inf;
@@ -143,39 +143,32 @@ y = xNaN';
 optNaN.method = 3;
 y_est = remNaNs_spline(xNaN,optNaN)';
 y = y_est;
-% csvwrite('y_est.csv', y_est);
+% csvwrite('M_csv\y_est.csv', y_est);
 
 % y = y_est;
 % %%
 % S = SKF(y_est, A, C, Q, R, Z_0, V_0);  % Kalman filter
 % 
-% csvwrite('SZm.csv', S.Zm)
-% csvwrite('SVm.csv', S.Vm)
-% csvwrite('SZmU.csv', S.ZmU)
-% csvwrite('SVmU.csv', S.VmU)
-% csvwrite('Sloglik.csv', S.loglik)
-% csvwrite('Sk_t.csv', S.k_t)
+% csvwrite('M_csv\SZm.csv', S.Zm)
+% csvwrite('M_csv\SVm.csv', S.Vm)
+% csvwrite('M_csv\SZmU.csv', S.ZmU)
+% csvwrite('M_csv\SVmU.csv', S.VmU)
+% csvwrite('M_csv\Sloglik.csv', S.loglik)
+% csvwrite('M_csv\Sk_t.csv', S.k_t)
 % 
 % 
 % %%
 % S = FIS(A, S);                     % Fixed interval smoother
-% 
-% csvwrite('FZm.csv', S.Zm)
-% csvwrite('FVm.csv', S.Vm)
-% csvwrite('FZmU.csv', S.ZmU)
-% csvwrite('FVmU.csv', S.VmU)
-% csvwrite('Floglik.csv', S.loglik)
-% csvwrite('Fk_t.csv', S.k_t)
-% csvwrite('FZmT.csv', S.ZmT)
-% csvwrite('FVmT.csv', S.VmT)
-% csvwrite('FVmT_1.csv', S.VmT_1)
+% csvwrite('M_csv\FZmT.csv', S.ZmT)
+% csvwrite('M_csv\FVmT.csv', S.VmT)
+% csvwrite('M_csv\FVmT_1.csv', S.VmT_1)
 % 
 % %%
 % [Zsmooth, Vsmooth, VVsmooth, loglik] = runKF(y_est, A, C, Q, R, Z_0, V_0);
-% csvwrite('Zsm.csv', Zsmooth)
-% csvwrite('Vsm.csv', Vsmooth)
-% csvwrite('VVsm.csv', VVsmooth)
-% csvwrite('loglikm.csv', loglik)
+% csvwrite('M_csv\Zsm.csv', Zsmooth)
+% csvwrite('M_csv\Vsm.csv', Vsmooth)
+% csvwrite('M_csv\VVsm.csv', VVsmooth)
+% csvwrite('M_csv\loglikm.csv', loglik)
     
 %%
 % [C_new, R_new, A_new, Q_new, Z_0, V_0, loglik] = ...  % Applying EM algorithm
