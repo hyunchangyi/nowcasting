@@ -51,16 +51,16 @@ summarize(X,Time,Spec,vintage); % summarize data
 threshold = 1e-5; % Set to 1e-5 for more robust estimates
 
 Res = dfm(X,Spec,threshold);
-csvwrite('M_csv\Res5_x_sm.csv', Res.x_sm)
-csvwrite('M_csv\Res5_X_sm.csv', Res.X_sm)
-csvwrite('M_csv\Res5_A.csv', Res.A)
-csvwrite('M_csv\Res5_C.csv', Res.C)
-csvwrite('M_csv\Res5_Q.csv', Res.Q)
-csvwrite('M_csv\Res5_R.csv', Res.R)
-csvwrite('M_csv\Res5_Z_0.csv', Res.Z_0)
-csvwrite('M_csv\Res5_V_0.csv', Res.V_0)
-csvwrite('M_csv\Res5_Mx.csv', Res.Mx)
-csvwrite('M_csv\Res5_Wx.csv', Res.Wx)
+% csvwrite('M_csv\Res5_x_sm.csv', Res.x_sm)
+% csvwrite('M_csv\Res5_X_sm.csv', Res.X_sm)
+% csvwrite('M_csv\Res5_A.csv', Res.A)
+% csvwrite('M_csv\Res5_C.csv', Res.C)
+% csvwrite('M_csv\Res5_Q.csv', Res.Q)
+% csvwrite('M_csv\Res5_R.csv', Res.R)
+% csvwrite('M_csv\Res5_Z_0.csv', Res.Z_0)
+% csvwrite('M_csv\Res5_V_0.csv', Res.V_0)
+% csvwrite('M_csv\Res5_Mx.csv', Res.Mx)
+% csvwrite('M_csv\Res5_Wx.csv', Res.Wx)
 
 %%
 save('ResDFM','Res','Spec');

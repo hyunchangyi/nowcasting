@@ -67,7 +67,21 @@ num_blocks = size(blocks,2);  % Number of blocks
 % Note that log-liklihood is NOT re-estimated after the runKF step: This
 % effectively gives the previous iteration's log-likelihood
 % For more information on output, see runKF
+
+save('mat\y.mat', 'y')
+save('mat\A.mat', 'A')
+save('mat\C.mat', 'C')
+save('mat\Q.mat', 'Q')
+save('mat\R.mat', 'R')
+save('mat\Z_0.mat', 'Z_0')
+save('mat\V_0.mat', 'V_0')
+
+
 [Zsmooth, Vsmooth, VVsmooth, loglik] = runKF(y, A, C, Q, R, Z_0, V_0);
+
+save('mat\Zsmooth.mat', 'Zsmooth')
+save('mat\Vsmooth.mat', 'Vsmooth')
+save('mat\VVsmooth.mat', 'VVsmooth')
 
 
 %% MAXIMIZATION STEP (TRANSITION EQUATION)
