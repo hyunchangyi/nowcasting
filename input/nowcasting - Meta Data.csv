@@ -1,0 +1,142 @@
+﻿Series ID,Series Name,Dataset ID,Frequency,Preprocess,Unit,Last Update
+KAB-HOUSEPRICE-0-S-A1000-IX-M,전국 주택가격 동향조사-전체-매매가격지수-전국-2017.11=100-월,HOUSEPRICE,월,,2017.11=100,2021-03-16 02:41:50
+KOSIS-101_DT_1DA7010S-M-T30-00-14STD06156,"종사상지위별 취업자 (월,분기,년 1963~2021.01)-월-취업자-계-천명",101_DT_1DA7010S,월,,천명,2021-03-15 21:15:19
+BBG-BBG-MPMIGLMA_Index,JPMorgan Global Manufacturing PMI SA,BBG,월,,Index,2021-03-16 08:23:33
+KAB-HOUSEPRICE-0-D-A1000-IX-M,전국 주택가격 동향조사-전체-전세가격지수-전국-2017.11=100-월,HOUSEPRICE,월,,2017.11=100,2021-03-16 02:41:50
+BBG-BBG-MPMIEMMA_Index,Markit Emerging Markets Manufacturing PMI SA,BBG,월,,Percent,2021-03-16 08:23:33
+KOSIS-101_DT_1J17001-M-T-T10-0-14691_BSM00033,"지출목적별 소비자물가지수(품목 포함, 2015＝100) (월,분기,년 1965.01~2021.02)-월-소비자물가지수-전국-0 총지수-2015＝100",101_DT_1J17001,월,,2015＝100,2021-03-15 21:15:19
+BBG-BBG-MPMIEMCA_Index,Markit Emerging Markets Composite PMI SA,BBG,월,,Percent,2021-03-16 08:23:33
+KOSIS-101_DT_1J17007-M-T10-QB-14691_BSM00033,"농산물 및 석유류제외지수(2015＝100) (월,분기,년 1975.01~2021.02)-월-소비자물가지수-농산물및석유류제외지수-2015＝100",101_DT_1J17007,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1J17009-M-T10-DB-14691_BSM00033,"식료품 및 에너지제외지수(2015＝100) (월,분기,년 1990.01~2021.02)-월-소비자물가지수-식료품 및 에너지제외 지수-2015＝100",101_DT_1J17009,월,,2015＝100,2021-03-15 21:15:19
+ECOS-013U202-MM-*AA,생산자물가지수(기본분류)(2015=100)-월-총지수,013U202,월,,2015=100,2021-03-15 23:53:52
+KRX-KOSPI_INDEX-KOSPI01-LAST_VOL-KRW-M,주가지수(KOSPI)-코스피-종가-원-월,KOSPI_INDEX,월,,원,2021-03-16 02:00:29
+KRX-KOSDAQ_INDEX-KOSDAQ01-LAST_VOL-KRW-M,주가지수(KOSDAQ)-코스닥-종가-원-월,KOSDAQ_INDEX,월,,원,2021-03-16 02:00:29
+ECOS-018U301-MM-*AA-D,수입물가지수(기본분류)(2015=100)-월-총지수-달러기준,018U301,월,,2015=100,2021-03-15 23:54:19
+ECOS-018U301-MM-*AA-W,수입물가지수(기본분류)(2015=100)-월-총지수-원화기준,018U301,월,,2015=100,2021-03-15 23:54:19
+ECOS-085U021-MM-P63A,주택매매가격지수(KB)-월-총지수,085U021,월,,2019.01=100,2021-03-15 23:56:38
+ECOS-085U022-MM-P64A,주택전세가격지수(KB)-월-총지수,085U022,월,,2019.01=100,2021-03-15 23:56:38
+IMF-PCPS-M-W00-POILDUB-IX,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, Dubai Crude -Index-Monthly",PCPS,월,,Index,2021-03-15 16:59:49
+IMF-PCPS-M-W00-POILDUB-USD,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, Dubai Crude -US Dollars-Monthly",PCPS,월,,US dollar,2021-03-15 16:59:49
+IMF-PCPS-M-W00-PEXGMETA-IX,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, All Metals EX GOLD Index-Index-Monthly",PCPS,월,,Index,2021-03-15 16:59:48
+IMF-PCPS-M-W00-PAGRI-IX,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, Agriculture-Index-Monthly",PCPS,월,,Index,2021-03-15 16:59:48
+IMF-PCPS-M-W00-PGOLD-IX,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, Gold -Index-Monthly",PCPS,월,,Index,2021-03-15 16:59:49
+IMF-PCPS-M-W00-PGOLD-USD,"PCPS-Units-Monthly-All Countries, excluding the IO-Primary Commodity Prices, Gold -US Dollars-Monthly",PCPS,월,,US dollar,2021-03-15 16:59:49
+ECOS-024U003-MM-TO99999,수출물량지수-월-총지수,024U003,월,,2005=100,2021-03-15 23:55:34
+ECOS-024U006-MM-TO99999,수입물량지수-월-총지수,024U006,월,,2005=100,2021-03-15 23:55:35
+ECOS-023U001-MM-FIEE,국별수출(관세청)-월-국별수출(관세청),023U001,월,,천달러 ,2021-03-15 23:56:38
+ECOS-023U002-MM-FIEF,국별수입(관세청)-월-국별수입(관세청),023U002,월,,천달러 ,2021-03-15 23:56:38
+ECOS-022U113-MM-SA000,경상수지(경상수지 S.A.)-월-경상수지,022U113,월,,백만달러 ,2021-03-15 23:53:47
+OECD-MEI_CLI-LOLITOAA-CHN-M,Composite Leading Indicators (MEI)-Amplitude adjusted (CLI)-China (People's Republic of)-Monthly,MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-LOLITOAA-KOR-M,Composite Leading Indicators (MEI)-Amplitude adjusted (CLI)-Korea-Monthly,MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-LOLITOAA-OECD-M,Composite Leading Indicators (MEI)-Amplitude adjusted (CLI)-OECD - Total-Monthly,MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-LOLITOAA-USA-M,Composite Leading Indicators (MEI)-Amplitude adjusted (CLI)-United States-Monthly,MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-BSCICP03-CHN-M,"Composite Leading Indicators (MEI)-OECD Standardised BCI, Amplitude adjusted (Long term average=100), sa-China (People's Republic of)-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-BSCICP03-KOR-M,"Composite Leading Indicators (MEI)-OECD Standardised BCI, Amplitude adjusted (Long term average=100), sa-Korea-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-BSCICP03-OECD-M,"Composite Leading Indicators (MEI)-OECD Standardised BCI, Amplitude adjusted (Long term average=100), sa-OECD - Total-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-BSCICP03-USA-M,"Composite Leading Indicators (MEI)-OECD Standardised BCI, Amplitude adjusted (Long term average=100), sa-United States-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-CSCICP03-CHN-M,"Composite Leading Indicators (MEI)-OECD Standardised CCI, Amplitude adjusted (Long term average=100), sa-China (People's Republic of)-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-CSCICP03-KOR-M,"Composite Leading Indicators (MEI)-OECD Standardised CCI, Amplitude adjusted (Long term average=100), sa-Korea-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-CSCICP03-OECD-M,"Composite Leading Indicators (MEI)-OECD Standardised CCI, Amplitude adjusted (Long term average=100), sa-OECD - Total-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+OECD-MEI_CLI-CSCICP03-USA-M,"Composite Leading Indicators (MEI)-OECD Standardised CCI, Amplitude adjusted (Long term average=100), sa-United States-Monthly",MEI_CLI,월,,Index,2021-03-16 03:08:28
+CPB-TRADE_OUT-W1-PDMI_SN-TGZ-2010=100-M,"Merchandise world trade, fixed base 2010=100-World-Prices / unit values in usd-trade-2010=100-Monthly",TRADE_OUT,월,,2010=100,2021-03-15 23:00:23
+CPB-TRADE_OUT-W1-QNMI_SN-TGZ-2010=100-M,"Merchandise world trade, fixed base 2010=100-World-Volumes, seasonally adjusted-trade-2010=100-Monthly",TRADE_OUT,월,,2010=100,2021-03-15 23:00:23
+CPB-INPRO_OUT-W1-QNMI_SP-2010=100-M,"Industrial production volume excluding construction, fixed base 2010=100-World-Production weighted, seasonally adjusted-2010=100-Monthly",INPRO_OUT,월,,2010=100,2021-03-15 23:00:22
+HAVER-baltic-bdim,Baltic Freight Indexes-Baltic Exchange Dry Index (Jan-04-85=1000),baltic,월,,Index,2021-02-09 15:01:02
+BIS-BIS_EER-M-N-N-KR,BIS_EER-Monthly-Nominal-Narrow (27 economies)-Korea,BIS_EER,월,,"Index, 2010 = 100",2021-01-10 17:07:37
+BIS-BIS_EER-M-R-N-KR,BIS_EER-Monthly-Real-Narrow (27 economies)-Korea,BIS_EER,월,,"Index, 2010 = 100",2021-01-10 17:07:37
+IMF-IFS-M-KR-ENDA_XDC_USD_RATE,"IFS-Units-Monthly-Korea, Republic of-Exchange Rates, Domestic Currency per U.S. Dollar, Period Average, Rate-Monthly",IFS,월,,,2021-03-15 16:54:36
+ECOS-041U013-MM-99988-AB,전국실적-월-전 산 업-매출실적2),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-99988-AA,전국실적-월-전 산 업-업황실적1),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-99988-AJ,전국실적-월-전 산 업-인력사정실적3),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-99988-AO,전국실적-월-전 산 업-자금사정실적6),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-99988-AE,전국실적-월-전 산 업-채산성실적6),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AK,전국실적-월-제 조 업-가동률실적4),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AM,전국실적-월-제 조 업-수출실적2),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AI,전국실적-월-제 조 업-설비투자실적5),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AL,전국실적-월-제 조 업-내수판매실적2),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AB,전국실적-월-제 조 업-매출실적2),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AD,전국실적-월-제 조 업-신규수주실적2),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U013-MM-C0000-AS,전국실적-월-제 조 업-업황실적(S.A),041U013,월,,,2021-03-15 23:56:04
+ECOS-041U014-MM-99988-BB,전국전망-월-전 산 업-매출전망2),041U014,월,,,2021-03-15 23:56:05
+ECOS-041U014-MM-99988-BA,전국전망-월-전 산 업-업황전망1),041U014,월,,,2021-03-15 23:56:05
+KOSIS-101_DT_1JH20152-M-T1-1-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-전산업생산지수(농림어업 제외)-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1JH20152-M-T1-1C-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-서비스업-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1JH20152-M-T1-1B-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-광공업-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1JH20152-M-T1-1E-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-공공행정-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1JH20152-M-T1-1D-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-건설업-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1C8013-M-T1-B03,경기종합지수(2015＝100) (10차) (월 1970.01~2021.01)-월-경기종합지수-동행지수 순환변동치,101_DT_1C8013,월,,,2021-03-15 21:15:19
+KOSIS-101_DT_1C8013-M-T1-A03,경기종합지수(2015＝100) (10차) (월 1970.01~2021.01)-월-경기종합지수-선행지수 순환변동치,101_DT_1C8013,월,,,2021-03-15 21:15:19
+MOLIT-HOUSE_PERMIT-KR_00-T1-UT-M,부문별 주택건설 인허가실적-전국-계-호-월,HOUSE_PERMIT,월,,호,2021-03-16 03:10:12
+ENARA-PERMIT-TOT-MS-M,건축허가현황-총계-㎡-월,PERMIT,월,,㎡,2021-03-16 01:00:12
+ENARA-CONSTR-TOT-MS-M,건축착공현황-총계-㎡-월,CONSTR,월,,㎡,2021-03-16 01:00:10
+ENARA-JOBSEEK-T01-PS-M,"고용센터 구인, 구직 및 취업현황-구인-명-월",JOBSEEK,월,,명,2021-03-16 01:00:13
+ENARA-JOBSEEK-T03-%-M,"고용센터 구인, 구직 및 취업현황-구인배수-%-월",JOBSEEK,월,,%,2021-03-16 01:00:13
+ENARA-JOBSEEK-T02-PS-M,"고용센터 구인, 구직 및 취업현황-구직-명-월",JOBSEEK,월,,명,2021-03-16 01:00:13
+ENARA-JOBSEEK-T05-%-M,"고용센터 구인, 구직 및 취업현황-취업률-%-월",JOBSEEK,월,,%,2021-03-16 01:00:13
+ENARA-JOBSEEK-T04-PS-M,"고용센터 구인, 구직 및 취업현황-취업자수-명-월",JOBSEEK,월,,명,2021-03-16 01:00:13
+KOSIS-101_DT_1DA7001S-M-T90-0-14STD00018,"성별 경제활동인구 총괄 (월,분기,년 1999.06~2021.01)-월-고용률-계-%",101_DT_1DA7001S,월,,%,2021-03-15 21:15:19
+KOSIS-101_DT_1DA7001S-M-T80-0-14STD00018,"성별 경제활동인구 총괄 (월,분기,년 1999.06~2021.01)-월-실업률-계-%",101_DT_1DA7001S,월,,%,2021-03-15 21:15:19
+KOSIS-101_DT_1DA7001S-M-T40-0-14STD06156,"성별 경제활동인구 총괄 (월,분기,년 1999.06~2021.01)-월-실업자-계-천명",101_DT_1DA7001S,월,,천명,2021-03-15 21:15:19
+KOSIS-101_DT_1DA9001S-M-T90-00-14STD00018,"계절조정 경제활동인구 총괄 (월,분기 1999.06~2021.01)-월-고용률-계-%",101_DT_1DA9001S,월,,%,2021-03-15 21:15:19
+KOSIS-101_DT_1DA9001S-M-T80-00-14STD00018,"계절조정 경제활동인구 총괄 (월,분기 1999.06~2021.01)-월-실업률-계-%",101_DT_1DA9001S,월,,%,2021-03-15 21:15:19
+KOSIS-101_DT_1DA9001S-M-T40-00-14STD06156,"계절조정 경제활동인구 총괄 (월,분기 1999.06~2021.01)-월-실업자-계-천명",101_DT_1DA9001S,월,,천명,2021-03-15 21:15:19
+KEPCO-POWER_PROP-KR_00-KR_0000-G01-kWh-M,시군구별 용도업종별 전력사용량-전국-전체-가정용-kWh-월,POWER_PROP,월,,kWh,2021-03-16 03:01:54
+KEPCO-POWER_PROP-KR_00-KR_0000-G03-kWh-M,시군구별 용도업종별 전력사용량-전국-전체-서비스업-kWh-월,POWER_PROP,월,,kWh,2021-03-16 03:01:54
+KEPCO-POWER_PROP-KR_00-KR_0000-G06-kWh-M,시군구별 용도업종별 전력사용량-전국-전체-제조업-kWh-월,POWER_PROP,월,,kWh,2021-03-16 03:01:54
+KEPCO-POWER_PROP-KR_00-KR_0000-TOT-kWh-M,시군구별 용도업종별 전력사용량-전국-전체-합계-kWh-월,POWER_PROP,월,,kWh,2021-03-16 03:01:54
+PETRO-OIL_USE-KR_00-BBL-M,지역별 유류소비량-전국-천bbl-월,OIL_USE,월,,천bbl,2021-03-16 03:20:09
+KAMA-AUTOSALES-DOMESTIC-TOT-TOT-TOT-UT-M,자동차 생산판매통계-내수-계-계-계-대-월,AUTOSALES,월,,대,2021-03-16 06:02:26
+KAMA-AUTOSALES-MANU-TOT-TOT-TOT-UT-M,자동차 생산판매통계-생산-계-계-계-대-월,AUTOSALES,월,,대,2021-03-16 06:02:26
+KAMA-AUTOSALES-OVERSEA-TOT-TOT-TOT-UT-M,자동차 생산판매통계-수출-계-계-계-대-월,AUTOSALES,월,,대,2021-03-16 06:02:26
+ECOS-010U101-MM-1130000-E000,통화 및 유동성지표-월-계절조정Lf-말잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-010U101-MM-1130000-A000,통화 및 유동성지표-월-계절조정Lf-평잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-010U101-MM-1110000-E000,통화 및 유동성지표-월-계절조정M1-말잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-010U101-MM-1110000-A000,통화 및 유동성지표-월-계절조정M1-평잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-010U101-MM-1120000-E000,통화 및 유동성지표-월-계절조정M2-말잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-010U101-MM-1120000-A000,통화 및 유동성지표-월-계절조정M2-평잔,010U101,월,,십억원 ,2021-03-15 23:55:24
+ECOS-001U048-MM-1000000,예금은행 종별예금(평잔)-월-총예금,001U048,월,,십억원 ,2021-03-16 00:01:07
+ECOS-001U053-MM-1000000,예금은행 자금별 대출금(말잔)-월-총대출금,001U053,월,,십억원 ,2021-03-16 00:01:08
+ECOS-075U006-MM-1000000,비은행기관 수신(평잔)-월-비은행금융기관(평잔) 1),075U006,월,,십억원 ,2021-03-16 00:01:08
+ECOS-075U008-MM-1000000,비은행기관 여신(말잔)-월-비은행금융기관(말잔) 1),075U008,월,,십억원 ,2021-03-16 00:01:08
+ECOS-028U001-MM-5050000,시장금리-월-국고채(10년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-5030000,시장금리-월-국고채(1년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-5020000,시장금리-월-국고채(3년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-5040000,시장금리-월-국고채(5년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-1010000,시장금리-월-무담보콜금리(1일),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-6010100,시장금리-월-통안증권(1년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-6010200,시장금리-월-통안증권(2년),028U001,월,,,2021-03-15 23:55:27
+ECOS-028U001-MM-7020000,"시장금리-월-회사채(장외3년,AA- 등급)",028U001,월,,,2021-03-15 23:55:27
+KOSIS-101_DT_1F01501-M-T22-00-A-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산자제품 재고지수(계절조정)-전국-광업 및 제조업-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01501-M-T22-00-0-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산자제품 재고지수(계절조정)-전국-총지수-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01501-M-T21-00-A-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산자제품 출하지수(계절조정)-전국-광업 및 제조업-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01501-M-T20-00-A-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산지수(계절조정)-전국-광업 및 제조업-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01501-M-T21-00-0-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산자제품 출하지수(계절조정)-전국-총지수-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01501-M-T20-00-0-14691_BSM00033,"시도/산업별 광공업생산지수(2015＝100) (월,분기,년 1975.01~2021.01)-월-생산지수(계절조정)-전국-총지수-2015＝100",101_DT_1F01501,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T21-00-3-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 출하지수(계절조정)-전국-소비재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T21-00-1-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 출하지수(계절조정)-전국-자본재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T21-00-2-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 출하지수(계절조정)-전국-중간재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T22-00-3-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 재고지수(계절조정)-전국-소비재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T22-00-1-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 재고지수(계절조정)-전국-자본재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1F01503-M-T22-00-2-14691_BSM00033,"시도 재별 제조업생산지수(2015＝100) (월,분기,년 1985.01~2021.01)-월-생산자제품 재고지수(계절조정)-전국-중간재-2015＝100",101_DT_1F01503,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-101_DT_1G18012-M-T1-0-14STD05057,"공종별 건설기성액(불변_계절조정) (월,분기 1997.07~2021.01)-월-기성액-계-백만원",101_DT_1G18012,월,,백만원,2021-03-15 21:15:19
+KOSIS-101_DT_1F48006-M-T10-1-14STD05057,"수요자별 기계수주(불변금액, 계절조정) (월,분기 1996.06~2021.01)-월-선박제외-국내수요-백만원",101_DT_1F48006,월,,백만원,2021-03-15 21:15:19
+KOSIS-101_DT_1JH20152-M-T1-1-14691_BSM00033,"전산업생산지수(계절조정지수) (월,분기 2000.01~2021.01)-월-계절조정지수-전산업생산지수(농림어업 제외)-2015＝100",101_DT_1JH20152,월,,2015＝100,2021-03-15 21:15:19
+KOSIS-301_DT_040Y002-M-13103112548999-13102112548CSI_CODE_FME-13102112548CSI_PART_99988,소비자동향조사(전국) (월 2008.07~2021.02)-월-소비자동향-소비자심리지수-전체,301_DT_040Y002,월,,,2021-03-15 21:15:19
+KOSIS-301_DT_040Y002-M-13103112548999-13102112548CSI_CODE_FMBB-13102112548CSI_PART_99988,소비자동향조사(전국) (월 2008.07~2021.02)-월-소비자동향-향후경기전망CSI-전체,301_DT_040Y002,월,,,2021-03-15 21:15:19
+KOSIS-301_DT_040Y002-M-13103112548999-13102112548CSI_CODE_FMAB-13102112548CSI_PART_99988,소비자동향조사(전국) (월 2008.07~2021.02)-월-소비자동향-현재경기판단CSI-전체,301_DT_040Y002,월,,,2021-03-15 21:15:19
+KOSIS-101_DT_1F70011-M-T5-C-14691_BSM00033,"설비투자지수 (월,분기,년 1995.02~2021.01)-월-계절조정지수-총지수-2015＝100",101_DT_1F70011,월,,2015＝100,2021-03-15 21:15:19
+ECOS-111U055-10124-QQ,분기지표-건설투자-분기,111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10111-QQ,"분기지표-국내총생산(GDP)(실질, 계절조정, 전기비)-분기",111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10111-QQ,"분기지표-국내총생산(GDP)(실질, 계절조정, 전기비)-분기",111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10121-QQ,"분기지표-국내총생산에 대한 지출(실질, 계절조정, 전기비)-분기",111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10122-QQ,분기지표-민간소비-분기,111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10123-QQ,분기지표-설비투자-분기,111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10126-QQ,분기지표-재화수입-분기,111U055,분기,,% ,2021-03-16 00:00:43
+ECOS-111U055-10125-QQ,분기지표-재화수출-분기,111U055,분기,,% ,2021-03-16 00:00:43
+BBG-BBG-MPMIKRMA_Index,Nikkei South Korea Manufacturing PMI SA,BBG,월,,Percent,2021-03-16 08:23:33
+BBG-BBG-KOEXTOT_Index,South Korea Exports,BBG,월,,"US dollar, Millions",2021-03-16 08:23:33
+BBG-BBG-KOIMTOT_Index,South Korea Imports,BBG,월,,"US dollar, Millions",2021-03-16 08:23:33
+KFTC-BANKRUPT-KR_00-PS-EA-M,부도업체수-전국-개인-개-월,BANKRUPT,월,,개,2021-02-22 00:00:00
+KFTC-BANKRUPT-KR_00-CO-EA-M,부도업체수-전국-법인-개-월,BANKRUPT,월,,개,2021-02-22 00:00:00
+EX-REGION_TRAFFIC-900-TOT-UT-M,고속도로 권역별 이용차량-전국-합계-대-월,REGION_TRAFFIC,월,,대,2021-03-16 12:22:40
+KOSIS-101_DT_1F31501-M-T30-C-14691_BSM00033,"제조업 생산능력 및 가동률지수(2015＝100) (월,분기,년 1971.01~2021.01)-월-가동률지수(계절조정)-제조업-2015＝100",101_DT_1F31501,월,,2015＝100,2021-03-15 21:15:19
