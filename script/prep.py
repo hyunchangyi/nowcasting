@@ -36,7 +36,7 @@ plt.rcParams['axes.unicode_minus'] = False
 #################### Preliminary #######################
 ########################################################
 from IPython.core.display import display, HTML
-display(HTML("<style>.container { width:90% !important; }</style>"))
+display(HTML("<style>.container { width:80% !important; }</style>"))
 
 
 # pandas
@@ -75,7 +75,7 @@ matplotlib.rcParams['axes.labelsize'] = 14
 matplotlib.rcParams['figure.titlesize'] = 22
 matplotlib.rcParams['axes.edgecolor'] = 'black'
 matplotlib.rcParams['legend.frameon'] = False
-matplotlib.rcParams['lines.linewidth'] = 3
+matplotlib.rcParams['lines.linewidth'] = 1.5
 matplotlib.rcParams['axes.linewidth'] = 1
 matplotlib.rcParams['axes.titlepad'] = 10
 matplotlib.rcParams['axes.labelpad'] = 1
